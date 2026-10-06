@@ -1,0 +1,16 @@
+name: CI Workflow
+
+on: [push]
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print welcome message
+        run: echo "Hello from [nurdaulet]"
+
+      - name: Display system information
+        run: uname -a
